@@ -6,3 +6,11 @@ E:\0. CNTT\0.FULL STACK\2. Bai tap C#\T5_20230621\obj\Debug\T5_20230621.csproj.S
 E:\0. CNTT\0.FULL STACK\2. Bai tap C#\T5_20230621\obj\Debug\T5_20230621.csproj.CoreCompileInputs.cache
 E:\0. CNTT\0.FULL STACK\2. Bai tap C#\T5_20230621\obj\Debug\T5_20230621.exe
 E:\0. CNTT\0.FULL STACK\2. Bai tap C#\T5_20230621\obj\Debug\T5_20230621.pdb
+E:\0. CNTT\0.FULL STACK\2. Bai tap C#\T5_20230621\T5_20230621\bin\Debug\T5_20230621.exe.config
+E:\0. CNTT\0.FULL STACK\2. Bai tap C#\T5_20230621\T5_20230621\bin\Debug\T5_20230621.exe
+E:\0. CNTT\0.FULL STACK\2. Bai tap C#\T5_20230621\T5_20230621\bin\Debug\T5_20230621.pdb
+E:\0. CNTT\0.FULL STACK\2. Bai tap C#\T5_20230621\T5_20230621\obj\Debug\T5_20230621.csproj.AssemblyReference.cache
+E:\0. CNTT\0.FULL STACK\2. Bai tap C#\T5_20230621\T5_20230621\obj\Debug\T5_20230621.csproj.SuggestedBindingRedirects.cache
+E:\0. CNTT\0.FULL STACK\2. Bai tap C#\T5_20230621\T5_20230621\obj\Debug\T5_20230621.csproj.CoreCompileInputs.cache
+E:\0. CNTT\0.FULL STACK\2. Bai tap C#\T5_20230621\T5_20230621\obj\Debug\T5_20230621.exe
+E:\0. CNTT\0.FULL STACK\2. Bai tap C#\T5_20230621\T5_20230621\obj\Debug\T5_20230621.pdb

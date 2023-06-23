@@ -127,9 +127,10 @@ namespace T5_20230621
         private Employee EnterArr()
         {
             Console.WriteLine("Moi ban nhap Record ");
-            string no = Console.ReadLine();
-            string name= Console.ReadLine();
-            string  email= Console.ReadLine();
+            string[] record = Console.ReadLine().Split(',');
+            string no = record[0];
+            string name= record[1];
+            string  email= record[2];
             Employee EmployeeEnter = new Employee(no, name, email);
             return EmployeeEnter;
         }
