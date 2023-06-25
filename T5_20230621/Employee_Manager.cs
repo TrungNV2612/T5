@@ -18,9 +18,9 @@ namespace T5_20230621
         {
             Console.WriteLine(this.name + " " + this.Version);
             this.employees = new Employee[]{
-                new Employee("E001", "hoangnm", "hoangnm@gmail.com"),
-                new Employee("E002", "namph", "namph@gmail.com"),
-                new Employee("E003", "minhnv", "minhnv@gmail.com"),
+                new Employee("E001", "hoangnm", "hoangnm@gmail.com","123", true),
+                new Employee("E002", "namph", "namph@gmail.com","1234", false),
+                new Employee("E003", "minhnv", "minhnv@gmail.com","12345", false),
             };
                 
         }
@@ -111,6 +111,31 @@ namespace T5_20230621
                 Console.WriteLine("Not Found!");
             }
                         
+        }
+
+        public int CheckLogin()
+        {
+            Console.WriteLine(" Please Enter Your Email");
+            string emailEnter = Console.ReadLine();
+            Console.WriteLine(" Please Enter Your Password");
+            string passwordEnter = Console.ReadLine();
+            int check = 0;
+            for(int i = 0; i < employees.Length; i++)
+            {
+                if (employees[i].GetEmail().Equals(emailEnter) && (employees[i].GetPass().Equals(passwordEnter)) && (employees[i].GetIsManager() ==true ))
+                {
+                    check = 1;                    
+                    break;
+                }
+                else if (employees[i].GetEmail().Equals(emailEnter) && (employees[i].GetPass().Equals(passwordEnter)) && (employees[i].GetIsManager() == false))
+                {
+                    check = 2;                    
+                    break;
+                }
+                else check = 3; 
+
+            }
+            return check;
         }
 
 

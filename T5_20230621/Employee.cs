@@ -11,6 +11,8 @@ namespace T5_20230621
         public String no;
         public String name;
         public String email;
+        public String password;
+        public bool isManager;
 
         //geter and constructor
         public String GetNo()
@@ -28,6 +30,16 @@ namespace T5_20230621
             return (this.email);
         }
 
+        public String GetPass()
+        {
+            return (this.password);
+        }
+
+        public bool GetIsManager()
+        {
+            return (this.isManager);
+        }
+
         public void SetObj(Employee Enter)
         {
             this.no = Enter.no;
@@ -40,6 +52,17 @@ namespace T5_20230621
             this.no = no;
             this.name = name;
             this.email = email;
+            
+        }
+
+        public Employee(string no, string name, string email, string password, bool isManager)
+        {
+            this.no = no;
+            this.name = name;
+            this.email = email;
+            this.password = password;   
+            this.isManager = isManager;
+
         }
 
         public override string ToString()
