@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -12,6 +13,7 @@ namespace T5_20230621
         private string Version = "2.00";
         private string name = "Employee_Manager";
         public int MAX = 10;
+        public string exportPath = "E:\\0. CNTT\\0.FULL STACK\\2. Bai tap C#\\T7ExportList.csv";
         private Employee[] employees;
 
         public Employee_Manager() :base()
@@ -24,10 +26,10 @@ namespace T5_20230621
             };
                 
         }
-        public override void AddNew()
+        public void AddNew( Employee employeeEnter)
         {
             int indexmax=employees.Length;            
-            Employee employeeenter = EnterArr();
+            //Employee employeeenter = EnterArr();
             Employee[] ArrTrunggian = employees;
             employees = new Employee[indexmax + 1];
             for(int i = 0; i <= indexmax; i++)
@@ -38,7 +40,7 @@ namespace T5_20230621
                 }
                 else
                 {
-                    employees[i] = employeeenter;
+                    employees[i] = employeeEnter;
                 }                
             }         
             
@@ -149,7 +151,50 @@ namespace T5_20230621
                 }
             }
         }
-        private Employee EnterArr()
+
+        public void ExportList()
+        {
+            StreamWriter listEmployee = new StreamWriter(exportPath);
+            foreach (Employee item in this.employees)
+            {
+                if (item != null)
+                {
+                    listEmployee.WriteLine(item);                   
+                }
+            }           
+           
+            listEmployee.Close();
+        }
+
+        public void ImportList()
+        {
+            Console.WriteLine(" Moi ban nhap duong dan file CSV");
+            string importPath = Console.ReadLine();            
+            StreamReader employeeImport = new StreamReader(importPath);            
+            string line;
+            do
+            {                
+                line = employeeImport.ReadLine();
+                if (line == null)
+                    break;
+                else
+                {
+                    string[] record = line.Split(',');
+                    string no = record[0].Trim();
+                    string name = record[1].Trim();
+                    string email = record[2].Trim();
+                    Employee EmployeeEnter = new Employee(no, name, email);
+                    this.AddNew(EmployeeEnter);
+                }                
+                                
+            }
+            while (line != null) ;
+            employeeImport.Close();
+        }
+
+
+
+        public Employee EnterArr()
         {
             Console.WriteLine("Moi ban nhap Record ");
             string[] record = Console.ReadLine().Split(',');

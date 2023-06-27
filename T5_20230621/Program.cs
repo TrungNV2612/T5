@@ -24,8 +24,10 @@ namespace T5_20230621
                     Console.WriteLine("3. Update Employee");
                     Console.WriteLine("4. Delete Employee");
                     Console.WriteLine("5. ViewAll Employee");
-                    Console.WriteLine("6. Exit");
-                    Console.Write("   Select (1-6): ");
+                    Console.WriteLine("6. Export Employee");
+                    Console.WriteLine("7. Import Employee");
+                    Console.WriteLine("8. Exit");
+                    Console.Write("   Select (1-8): ");
                     selected = Convert.ToInt16(Console.ReadLine());
                     switch (selected)
                     {
@@ -35,7 +37,8 @@ namespace T5_20230621
                             break;
                         case 2:
                             Console.Clear();
-                            manager.AddNew();
+                            Employee employeeEnter = manager.EnterArr();
+                            manager.AddNew(employeeEnter);
                             break;
                         case 3:
                             Console.Clear();
@@ -51,6 +54,14 @@ namespace T5_20230621
                             break;
                         case 6:
                             Console.Clear();
+                            manager.ExportList();
+                            break;
+                        case 7:
+                            Console.Clear();
+                            manager.ImportList();
+                            break;
+                        case 8:
+                            Console.Clear();
                             Console.WriteLine("-------- END ---------");
                             break;
                         default:
@@ -59,7 +70,7 @@ namespace T5_20230621
                             break;
                     }
                 }
-                while (selected != 6);
+                while (selected != 8);
             }
             else if (checkLogin == 2)
             {
